@@ -7,7 +7,7 @@ from pathlib import Path
 
 def run(argv=None):
     parser = argparse.ArgumentParser(description="Pocket Pantry")
-    parser.add_argument("--file", default=os.environ.get("PANTRY_FILE", "pantry.json"))
+    parser.add_argument("--file", default=os.environ.get("PANTRY_FILE", "kitchen.json"))
     sub = parser.add_subparsers(dest="command", required=True)
     add = sub.add_parser("add")
     add.add_argument("name")
